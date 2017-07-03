@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Map View Controller-->
+        <scene sceneID="wNa-5a-cmx">
+            <objects>
+                <viewController storyboardIdentifier="MainMapViewController" id="jCB-s3-4n1" customClass="MainMapViewController" customModule="Doosidoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Awq-7a-ic2"/>
+                        <viewControllerLayoutGuide type="bottom" id="F0Y-Zm-Df2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XSd-Wa-icr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5c-iy-MHA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L5c-iy-MHA" firstAttribute="leading" secondItem="XSd-Wa-icr" secondAttribute="leading" id="03k-Z7-tTd"/>
+                            <constraint firstItem="L5c-iy-MHA" firstAttribute="top" secondItem="Awq-7a-ic2" secondAttribute="bottom" id="3UO-8G-1fn"/>
+                            <constraint firstAttribute="trailing" secondItem="L5c-iy-MHA" secondAttribute="trailing" id="ohy-yp-dUq"/>
+                            <constraint firstItem="F0Y-Zm-Df2" firstAttribute="top" secondItem="L5c-iy-MHA" secondAttribute="bottom" id="rCW-ya-IYY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KIH-u5-YGe"/>
+                    <connections>
+                        <outlet property="_mapView" destination="L5c-iy-MHA" id="TBd-VJ-DFg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YkA-EU-neG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231.2" y="-156.07196401799101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nVg-0c-KJQ">
+            <objects>
+                <navigationController storyboardIdentifier="rootMap" automaticallyAdjustsScrollViewInsets="NO" id="IJ3-6d-2ng" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SCP-Fc-QiA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98039215690000003" green="0.80392156859999997" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jCB-s3-4n1" kind="relationship" relationship="rootViewController" id="S5i-JX-E44"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhI-nJ-kBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="-156.07196401799101"/>
+        </scene>
+    </scenes>
+</document>

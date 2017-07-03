@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Doosidoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="XP5-RG-WTp">
+                                <rect key="frame" x="33" y="50" width="309" height="165"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RyD-cg-aqC" customClass="BorderedView" customModule="Doosidoo" customModuleProvider="target">
+                                <rect key="frame" x="50" y="245" width="275" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jq-45-4CN">
+                                        <rect key="frame" x="8" y="0.0" width="259" height="44"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4jq-45-4CN" secondAttribute="trailing" constant="8" id="I3p-JQ-1Uh"/>
+                                    <constraint firstAttribute="bottom" secondItem="4jq-45-4CN" secondAttribute="bottom" id="QCS-iC-SRG"/>
+                                    <constraint firstAttribute="height" constant="44" id="TRl-0u-B3b"/>
+                                    <constraint firstItem="4jq-45-4CN" firstAttribute="top" secondItem="RyD-cg-aqC" secondAttribute="top" id="dye-gx-hsi"/>
+                                    <constraint firstItem="4jq-45-4CN" firstAttribute="leading" secondItem="RyD-cg-aqC" secondAttribute="leading" constant="8" id="kKf-hD-jpx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-JO-Vw8" customClass="BorderedView" customModule="Doosidoo" customModuleProvider="target">
+                                <rect key="frame" x="50" y="299" width="275" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAe-DZ-9Mm">
+                                        <rect key="frame" x="8" y="0.0" width="259" height="44"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XAe-DZ-9Mm" secondAttribute="bottom" id="4wu-8P-Jgb"/>
+                                    <constraint firstItem="XAe-DZ-9Mm" firstAttribute="leading" secondItem="vmm-JO-Vw8" secondAttribute="leading" constant="8" id="DrV-fT-G60"/>
+                                    <constraint firstAttribute="trailing" secondItem="XAe-DZ-9Mm" secondAttribute="trailing" constant="8" id="FHs-kf-lqW"/>
+                                    <constraint firstItem="XAe-DZ-9Mm" firstAttribute="top" secondItem="vmm-JO-Vw8" secondAttribute="top" id="XKT-2b-l2v"/>
+                                    <constraint firstAttribute="height" constant="44" id="cml-3m-jng"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tw-S1-zlF" customClass="BorderedButton" customModule="Doosidoo" customModuleProvider="target">
+                                <rect key="frame" x="50" y="351" width="132" height="46"/>
+                                <color key="backgroundColor" red="0.29803921568627451" green="0.72549019607843135" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="zry-5n-ai0"/>
+                                </constraints>
+                                <state key="normal" title="ลงชื่อเข้าใช้">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNl-Zh-0xY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-G6-Z42" customClass="BorderedButton" customModule="Doosidoo" customModuleProvider="target">
+                                <rect key="frame" x="193" y="351" width="132" height="46"/>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ลงทะเบียน">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRG-yb-Mdp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="หรือลงชื่อเข้าใช้ผ่านบัญชีเฟสบุ๊ค" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgf-VS-Mk2">
+                                <rect key="frame" x="8" y="573" width="359" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="X8Q-hB-iUZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.11764705882352941" green="0.24313725490196078" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vz-27-Av8">
+                                <rect key="frame" x="0.0" y="602" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7KU-m6-aS3"/>
+                                </constraints>
+                                <state key="normal" image="signinFB"/>
+                                <connections>
+                                    <action selector="signinFBAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pc0-8c-8cI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.80392156862745101" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vmm-JO-Vw8" firstAttribute="top" secondItem="RyD-cg-aqC" secondAttribute="bottom" constant="10" id="0lY-Fd-Shv"/>
+                            <constraint firstItem="7vz-27-Av8" firstAttribute="centerX" secondItem="Hgf-VS-Mk2" secondAttribute="centerX" id="37e-c1-xbd"/>
+                            <constraint firstAttribute="trailing" secondItem="RyD-cg-aqC" secondAttribute="trailing" constant="50" id="7C4-9M-As3"/>
+                            <constraint firstItem="XP5-RG-WTp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="FES-jz-R9G"/>
+                            <constraint firstItem="7vz-27-Av8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FGj-ia-1Tb"/>
+                            <constraint firstItem="RyD-cg-aqC" firstAttribute="top" secondItem="XP5-RG-WTp" secondAttribute="bottom" constant="30" id="MbH-tV-UHL"/>
+                            <constraint firstAttribute="trailing" secondItem="vmm-JO-Vw8" secondAttribute="trailing" constant="50" id="PV1-Zp-iYH"/>
+                            <constraint firstItem="Hgf-VS-Mk2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="TtY-oO-aba"/>
+                            <constraint firstAttribute="trailing" secondItem="8Tt-G6-Z42" secondAttribute="trailing" constant="50" id="UX9-xz-DaF"/>
+                            <constraint firstItem="7vz-27-Av8" firstAttribute="top" secondItem="Hgf-VS-Mk2" secondAttribute="bottom" constant="8" id="Ur5-F8-585"/>
+                            <constraint firstItem="XP5-RG-WTp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="WLi-MN-yjW"/>
+                            <constraint firstItem="vmm-JO-Vw8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="WWY-aA-5yh"/>
+                            <constraint firstAttribute="trailing" secondItem="Hgf-VS-Mk2" secondAttribute="trailing" constant="8" id="bKp-SJ-Bhx"/>
+                            <constraint firstItem="7tw-S1-zlF" firstAttribute="top" secondItem="vmm-JO-Vw8" secondAttribute="bottom" constant="8" id="bUj-jZ-rcN"/>
+                            <constraint firstItem="Hgf-VS-Mk2" firstAttribute="top" secondItem="8Tt-G6-Z42" secondAttribute="bottom" constant="176" id="bqi-yw-Irb"/>
+                            <constraint firstItem="8Tt-G6-Z42" firstAttribute="leading" secondItem="7tw-S1-zlF" secondAttribute="trailing" constant="11" id="fH6-3n-K1d"/>
+                            <constraint firstItem="RyD-cg-aqC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="g8Z-Na-HaO"/>
+                            <constraint firstItem="7vz-27-Av8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gmq-fu-aC2"/>
+                            <constraint firstItem="8Tt-G6-Z42" firstAttribute="width" secondItem="7tw-S1-zlF" secondAttribute="width" id="jxi-jG-hmI"/>
+                            <constraint firstItem="8Tt-G6-Z42" firstAttribute="top" secondItem="vmm-JO-Vw8" secondAttribute="bottom" constant="8" id="o2F-6s-AJk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XP5-RG-WTp" secondAttribute="trailing" constant="17" id="pdN-4d-x6y"/>
+                            <constraint firstItem="7tw-S1-zlF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="pqf-KZ-DTp"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7vz-27-Av8" secondAttribute="trailing" id="pwz-Xq-FBH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hgf-VS-Mk2" secondAttribute="bottom" constant="73" id="rbr-Zv-uIH"/>
+                            <constraint firstItem="8Tt-G6-Z42" firstAttribute="height" secondItem="7tw-S1-zlF" secondAttribute="height" id="vuY-27-SMe"/>
+                            <constraint firstItem="XP5-RG-WTp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xai-Ub-MHN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gmq-fu-aC2"/>
+                                <exclude reference="pwz-Xq-FBH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="Password" destination="XAe-DZ-9Mm" id="MzD-W7-dSX"/>
+                        <outlet property="Username" destination="4jq-45-4CN" id="hPe-oT-hTo"/>
+                        <segue destination="XG5-jM-oZQ" kind="presentation" identifier="signInToRoot" id="PPZ-sL-YKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--rootMap-->
+        <scene sceneID="xe4-e8-QHh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="rootMap" id="XG5-jM-oZQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9OW-vJ-VBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="309" height="129"/>
+        <image name="signinFB" width="239" height="45"/>
+    </resources>
+</document>
